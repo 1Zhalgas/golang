@@ -67,11 +67,11 @@ func main() {
 	// Mailtrap settings as the default values. IMPORTANT: If you're following along,
 	// make sure to replace the default values for smtp-username and smtp-password
 	// with your own Mailtrap credentials.
-	flag.StringVar(&cfg.smtp.host, "smtp-host", "smtp.mailtrap.io", "SMTP host")
-	flag.IntVar(&cfg.smtp.port, "smtp-port", 25, "SMTP port")
-	flag.StringVar(&cfg.smtp.username, "smtp-username", "31849c8bce07d5", "SMTP username")
-	flag.StringVar(&cfg.smtp.password, "smtp-password", "3346f6ee47bf8f", "SMTP password")
-	flag.StringVar(&cfg.smtp.sender, "smtp-sender", "Greenlight <no-reply@greenlight.alexedwards.net>", "SMTP sender")
+	flag.StringVar(&cfg.smtp.host, "smtp-host", "smtp.office365.com", "SMTP host")
+	flag.IntVar(&cfg.smtp.port, "smtp-port", 587, "SMTP port")
+	flag.StringVar(&cfg.smtp.username, "smtp-username", "211510@astanait.edu.kz", "SMTP username")
+	flag.StringVar(&cfg.smtp.password, "smtp-password", "Askhat123452004", "SMTP password")
+	flag.StringVar(&cfg.smtp.sender, "smtp-sender", "211510@astanait.edu.kz", "SMTP sender")
 	flag.Parse()
 	logger := jsonlog.New(os.Stdout, jsonlog.LevelInfo)
 	db, err := openDB(cfg)
